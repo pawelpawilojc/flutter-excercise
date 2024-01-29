@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:listopad3/utils/my_images.dart';
+import 'package:listopad3/utils/my_texts.dart';
 import 'package:listopad3/views/register/register_view.dart';
+import 'package:listopad3/views/widgets/basic_text_form_field.dart';
 
 import '../../utils/my_colors.dart';
 
@@ -22,12 +24,13 @@ class _LoginPageState extends State<LoginPage> {
       child: Scaffold(
         body: Column(
           children: [
-            Text('Sign In',
+            Text(MyTexts.signIn,
                 style: TextStyle(
                     fontSize: 30,
                     fontFamily: 'Inter',
                     fontWeight: FontWeight.w700,
-                    color: HexColor('#471AA0'))),
+                    color: MyColors.midnightOrchidColor)),
+            BasicTextFormField(initialValue: "hello", prefixIconChoice: "person"),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: ElevatedButton(

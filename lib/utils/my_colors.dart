@@ -2,7 +2,9 @@ import 'dart:ui';
 class MyColors {
   static final blackColor = HexColor("#0E0E0E");
   static final whiteColor = HexColor("#FFFFFF");
-  static final purpleColor = HexColor("#471AA0");
+  static final midnightOrchidColor = HexColor("#471AA0");
+  static final enchantingAmethystColor = HexColor("#9747FF");
+  static final grayColor = HexColor("#4D4D4D");
 }
 class HexColor extends Color {
   static int _getColorFromHex(String hexColor) {
