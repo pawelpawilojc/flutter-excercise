@@ -30,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
                     fontFamily: 'Inter',
                     fontWeight: FontWeight.w700,
                     color: MyColors.midnightOrchidColor)),
-            BasicTextFormField(initialValue: "hello", prefixIconChoice: "person"),
+            BasicTextFormField(prefixIconChoice: "person"),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: ElevatedButton(

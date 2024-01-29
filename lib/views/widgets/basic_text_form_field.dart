@@ -3,15 +3,15 @@ import 'package:listopad3/utils/my_colors.dart';
 
 class BasicTextFormField extends StatelessWidget {
   const BasicTextFormField(
-      {super.key, required this.initialValue, required this.prefixIconChoice});
+      {super.key, required this.prefixIconChoice});
 
-  final String initialValue;
+
   final String prefixIconChoice;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      initialValue: initialValue,
+
       decoration: _buildInputDecoration(),
     );
   }
@@ -21,6 +21,7 @@ class BasicTextFormField extends StatelessWidget {
       return InputDecoration(
         prefixIcon: Icon(Icons.person_outline_rounded),
         prefixIconColor: MyColors.enchantingAmethystColor,
+        hintText: "Email or User Name"
       );
     }
     if (prefixIconChoice == "email") {
