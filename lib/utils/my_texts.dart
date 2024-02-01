@@ -5,4 +5,9 @@ class MyTexts {
   static const hintEmail = "Email";
   static const hintPassword = "Password";
   static const hintPassword2 = "Confirm Password";
+  static const forgotPassword = "Forgot Password?";
+  static const signInSocials = "Or sign in with";
+  static const noAccount = "Don't have an account? ";
+  static const signUp = "Sign Up";
+
 }

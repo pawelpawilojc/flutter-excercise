@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:listopad3/utils/my_colors.dart';
+import 'package:listopad3/utils/my_images.dart';
 import 'package:listopad3/utils/my_texts.dart';
 
 class BasicTextFormField extends StatelessWidget {
@@ -16,52 +17,89 @@ class BasicTextFormField extends StatelessWidget {
 
   InputDecoration _buildInputDecoration() {
     final borderSide = const BorderSide(color: Color(0xFF9747FF), width: 2.0);
-    final border = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(5.0),
+    final borderEnabled = OutlineInputBorder(
+      borderRadius: BorderRadius.circular(15.0),
       borderSide: borderSide,
     );
+    final borderSideThicker =
+        const BorderSide(color: Color(0xFF9747FF), width: 4.0);
+    final borderFocused = OutlineInputBorder(
+      borderRadius: BorderRadius.circular(15.0),
+      borderSide: borderSideThicker,
+    );
+    final hintStyle = const TextStyle(
+      fontSize: 15,
+      color: Color(0x4D000000),
+      fontFamily: 'Inter',
+      fontWeight: FontWeight.w400,
+    );
+
     if (prefixIconChoice == "person") {
       return InputDecoration(
-        prefixIcon: Icon(Icons.person_outline_rounded),
-        prefixIconColor: MyColors.enchantingAmethystColor,
+        prefixIcon: Image.asset(
+          MyImages.userIcon,
+        ),
+        prefixIconColor: MyColors.midnightOrchidColor,
         hintText: MyTexts.hintPerson,
-        border: border,
+        hintStyle: TextStyle(
+          fontSize: 15,
+          color: Color(0x4D000000),
+          fontFamily: 'Inter',
+          fontWeight: FontWeight.w400,
+          shadows: <Shadow>[
+            Shadow(
+              offset: Offset(0.0, 3.0),
+              blurRadius: 10.0,
+              color: Color(0x4D000000),
+            ),
+          ],
+        ),
+        enabledBorder: borderEnabled,
+        focusedBorder: borderFocused,
       );
     }
     if (prefixIconChoice == "name") {
       return InputDecoration(
         prefixIcon: Icon(Icons.person_outline_rounded),
-        prefixIconColor: MyColors.enchantingAmethystColor,
+        prefixIconColor: MyColors.midnightOrchidColor,
         hintText: MyTexts.hintName,
-        border: border,
+        hintStyle: hintStyle,
+        enabledBorder: borderEnabled,
+        focusedBorder: borderFocused,
       );
     }
     if (prefixIconChoice == "email") {
       return InputDecoration(
         prefixIcon: Icon(Icons.email_outlined),
-        prefixIconColor: MyColors.enchantingAmethystColor,
+        prefixIconColor: MyColors.midnightOrchidColor,
         hintText: MyTexts.hintEmail,
-        border: border,
+        hintStyle: hintStyle,
+        enabledBorder: borderEnabled,
+        focusedBorder: borderFocused,
       );
     }
     if (prefixIconChoice == "password") {
       return InputDecoration(
         prefixIcon: Icon(Icons.lock_outline_rounded),
-        prefixIconColor: MyColors.enchantingAmethystColor,
+        prefixIconColor: MyColors.midnightOrchidColor,
         hintText: MyTexts.hintPassword,
+        hintStyle: hintStyle,
         suffixIcon: Icon(Icons.remove_red_eye_outlined),
         suffixIconColor: MyColors.grayColor,
-        border: border,
+        enabledBorder: borderEnabled,
+        focusedBorder: borderFocused,
       );
     }
     if (prefixIconChoice == "password2") {
       return InputDecoration(
         prefixIcon: Icon(Icons.lock_outline_rounded),
-        prefixIconColor: MyColors.enchantingAmethystColor,
+        prefixIconColor: MyColors.midnightOrchidColor,
         hintText: MyTexts.hintPassword2,
+        hintStyle: hintStyle,
         suffixIcon: Icon(Icons.remove_red_eye_outlined),
         suffixIconColor: MyColors.grayColor,
-        border: border,
+        enabledBorder: borderEnabled,
+        focusedBorder: borderFocused,
       );
     }
 
