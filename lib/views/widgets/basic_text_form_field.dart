@@ -16,18 +16,18 @@ class BasicTextFormField extends StatelessWidget {
   }
 
   InputDecoration _buildInputDecoration() {
-    final borderSide = const BorderSide(color: Color(0xFF9747FF), width: 2.0);
+    const borderSide = BorderSide(color: Color(0xFF9747FF), width: 2.0);
     final borderEnabled = OutlineInputBorder(
       borderRadius: BorderRadius.circular(15.0),
       borderSide: borderSide,
     );
-    final borderSideThicker =
-        const BorderSide(color: Color(0xFF9747FF), width: 4.0);
+    const borderSideThicker =
+        BorderSide(color: Color(0xFF9747FF), width: 4.0);
     final borderFocused = OutlineInputBorder(
       borderRadius: BorderRadius.circular(15.0),
       borderSide: borderSideThicker,
     );
-    final hintStyle = const TextStyle(
+    const hintStyle = TextStyle(
       fontSize: 15,
       color: Color(0x4D000000),
       fontFamily: 'Inter',
@@ -39,9 +39,9 @@ class BasicTextFormField extends StatelessWidget {
         prefixIcon: Image.asset(
           MyImages.userIcon,
         ),
-        prefixIconColor: MyColors.midnightOrchidColor,
+
         hintText: MyTexts.hintPerson,
-        hintStyle: TextStyle(
+        hintStyle: const TextStyle(
           fontSize: 15,
           color: Color(0x4D000000),
           fontFamily: 'Inter',
@@ -60,8 +60,10 @@ class BasicTextFormField extends StatelessWidget {
     }
     if (prefixIconChoice == "name") {
       return InputDecoration(
-        prefixIcon: Icon(Icons.person_outline_rounded),
-        prefixIconColor: MyColors.midnightOrchidColor,
+        prefixIcon: Image.asset(
+          MyImages.userIcon,
+        ),
+
         hintText: MyTexts.hintName,
         hintStyle: hintStyle,
         enabledBorder: borderEnabled,
@@ -70,7 +72,7 @@ class BasicTextFormField extends StatelessWidget {
     }
     if (prefixIconChoice == "email") {
       return InputDecoration(
-        prefixIcon: Icon(Icons.email_outlined),
+        prefixIcon: const Icon(Icons.email_outlined),
         prefixIconColor: MyColors.midnightOrchidColor,
         hintText: MyTexts.hintEmail,
         hintStyle: hintStyle,
@@ -80,11 +82,11 @@ class BasicTextFormField extends StatelessWidget {
     }
     if (prefixIconChoice == "password") {
       return InputDecoration(
-        prefixIcon: Icon(Icons.lock_outline_rounded),
+        prefixIcon: const Icon(Icons.lock_outline_rounded),
         prefixIconColor: MyColors.midnightOrchidColor,
         hintText: MyTexts.hintPassword,
         hintStyle: hintStyle,
-        suffixIcon: Icon(Icons.remove_red_eye_outlined),
+        suffixIcon: const Icon(Icons.remove_red_eye_outlined),
         suffixIconColor: MyColors.grayColor,
         enabledBorder: borderEnabled,
         focusedBorder: borderFocused,
@@ -92,17 +94,17 @@ class BasicTextFormField extends StatelessWidget {
     }
     if (prefixIconChoice == "password2") {
       return InputDecoration(
-        prefixIcon: Icon(Icons.lock_outline_rounded),
+        prefixIcon: const Icon(Icons.lock_outline_rounded),
         prefixIconColor: MyColors.midnightOrchidColor,
         hintText: MyTexts.hintPassword2,
         hintStyle: hintStyle,
-        suffixIcon: Icon(Icons.remove_red_eye_outlined),
+        suffixIcon: const Icon(Icons.remove_red_eye_outlined),
         suffixIconColor: MyColors.grayColor,
         enabledBorder: borderEnabled,
         focusedBorder: borderFocused,
       );
     }
 
-    return InputDecoration();
+    return const InputDecoration();
   }
 }
