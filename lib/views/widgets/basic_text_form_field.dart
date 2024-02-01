@@ -4,7 +4,7 @@ import 'package:listopad3/utils/my_images.dart';
 import 'package:listopad3/utils/my_texts.dart';
 
 class BasicTextFormField extends StatelessWidget {
-  const BasicTextFormField({super.key, required this.prefixIconChoice});
+  const BasicTextFormField({required this.prefixIconChoice, super.key});
 
   final String prefixIconChoice;
 
@@ -16,15 +16,15 @@ class BasicTextFormField extends StatelessWidget {
   }
 
   InputDecoration _buildInputDecoration() {
-    const borderSide = BorderSide(color: Color(0xFF9747FF), width: 2.0);
+    const borderSide = BorderSide(color: Color(0xFF9747FF), width: 2);
     final borderEnabled = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(15.0),
+      borderRadius: BorderRadius.circular(15),
       borderSide: borderSide,
     );
     const borderSideThicker =
-        BorderSide(color: Color(0xFF9747FF), width: 4.0);
+        BorderSide(color: Color(0xFF9747FF), width: 4);
     final borderFocused = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(15.0),
+      borderRadius: BorderRadius.circular(15),
       borderSide: borderSideThicker,
     );
     const hintStyle = TextStyle(
@@ -34,7 +34,7 @@ class BasicTextFormField extends StatelessWidget {
       fontWeight: FontWeight.w400,
     );
 
-    if (prefixIconChoice == "person") {
+    if (prefixIconChoice == 'person') {
       return InputDecoration(
         prefixIcon: Image.asset(
           MyImages.userIcon,
@@ -48,8 +48,8 @@ class BasicTextFormField extends StatelessWidget {
           fontWeight: FontWeight.w400,
           shadows: <Shadow>[
             Shadow(
-              offset: Offset(0.0, 3.0),
-              blurRadius: 10.0,
+              offset: Offset(0, 3),
+              blurRadius: 10,
               color: Color(0x4D000000),
             ),
           ],
@@ -58,7 +58,7 @@ class BasicTextFormField extends StatelessWidget {
         focusedBorder: borderFocused,
       );
     }
-    if (prefixIconChoice == "name") {
+    if (prefixIconChoice == 'name') {
       return InputDecoration(
         prefixIcon: Image.asset(
           MyImages.userIcon,
@@ -70,7 +70,7 @@ class BasicTextFormField extends StatelessWidget {
         focusedBorder: borderFocused,
       );
     }
-    if (prefixIconChoice == "email") {
+    if (prefixIconChoice == 'email') {
       return InputDecoration(
         prefixIcon: const Icon(Icons.email_outlined),
         prefixIconColor: MyColors.midnightOrchidColor,
@@ -80,7 +80,7 @@ class BasicTextFormField extends StatelessWidget {
         focusedBorder: borderFocused,
       );
     }
-    if (prefixIconChoice == "password") {
+    if (prefixIconChoice == 'password') {
       return InputDecoration(
         prefixIcon: const Icon(Icons.lock_outline_rounded),
         prefixIconColor: MyColors.midnightOrchidColor,
@@ -92,7 +92,7 @@ class BasicTextFormField extends StatelessWidget {
         focusedBorder: borderFocused,
       );
     }
-    if (prefixIconChoice == "password2") {
+    if (prefixIconChoice == 'password2') {
       return InputDecoration(
         prefixIcon: const Icon(Icons.lock_outline_rounded),
         prefixIconColor: MyColors.midnightOrchidColor,
