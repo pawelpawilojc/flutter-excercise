@@ -6,4 +6,6 @@ class MyImages {
   static const socialLogo_google = "$_assetsFolder/social_logo_google.png";
   static const socialLogo_in = "$_assetsFolder/social_logo_in.png";
   static const socialLogo_x = "$_assetsFolder/social_logo_x.png";
+  static const corner_ballons = "$_assetsFolder/corner_ballons.png";
+  static const backIcon = "$_assetsFolder/ion_chevron-back.png";
 }

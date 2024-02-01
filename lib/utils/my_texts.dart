@@ -8,6 +8,8 @@ class MyTexts {
   static const forgotPassword = "Forgot Password?";
   static const signInSocials = "Or sign in with";
   static const noAccount = "Don't have an account? ";
+  static const yesAccount = "Already have an account? ";
   static const signUp = "Sign Up";
+  static const back = "Back";
 
 }

@@ -16,8 +16,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  bool boolValue = false;
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -32,14 +30,12 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 20),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: Container(
-                    child: Text(MyTexts.signIn,
-                        style: TextStyle(
-                            fontSize: 30,
-                            fontFamily: 'Inter',
-                            fontWeight: FontWeight.w700,
-                            color: MyColors.midnightOrchidColor)),
-                  ),
+                  child: Text(MyTexts.signIn,
+                      style: TextStyle(
+                          fontSize: 30,
+                          fontFamily: 'Inter',
+                          fontWeight: FontWeight.w700,
+                          color: MyColors.midnightOrchidColor)),
                 ),
                 const SizedBox(height: 30),
                 const BasicTextFormField(prefixIconChoice: "person"),
@@ -84,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                         fontFamily: 'Inter',
                         fontWeight: FontWeight.w400,
                         color: MyColors.midnightOrchidColor,
-                        shadows: <Shadow>[
+                        shadows: const <Shadow>[
                           Shadow(
                             offset: Offset(0.0, 3.0),
                             blurRadius: 10.0,
@@ -92,8 +88,8 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ])),
                 const SizedBox(height: 20),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -113,7 +109,8 @@ class _LoginPageState extends State<LoginPage> {
                           builder: (context) => const RegisterPage()),
                     );
                   },
-                  child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         MyTexts.noAccount,
