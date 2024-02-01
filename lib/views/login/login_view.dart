@@ -24,6 +24,7 @@ class _LoginPageState extends State<LoginPage> {
       child: Scaffold(
         body: Column(
           children: [
+            Image.asset(MyImages.imageLogo),
             Text(MyTexts.signIn,
                 style: TextStyle(
                     fontSize: 30,
@@ -52,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
               },
               child: const Text('Sign Up'),
             ),
-            Image.asset(MyImages.imageLogo),
+
             const SizedBox(height: 30),
             GestureDetector(
               onTap: () {
