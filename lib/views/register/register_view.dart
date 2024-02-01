@@ -15,27 +15,32 @@ class RegisterPage extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Row(children: [
-                const SizedBox(height: 10, width: 20),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: Row(
-                    children: [
-                      Image.asset(MyImages.backIcon),
-                      Text(MyTexts.back,
+              Row(
+                children: [
+                  const SizedBox(height: 10, width: 20),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Row(
+                      children: [
+                        Image.asset(MyImages.backIcon),
+                        Text(
+                          MyTexts.back,
                           style: TextStyle(
-                              fontSize: 12,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w400,
-                              color: MyColors.midnightOrchidColor,),),
-                    ],
+                            fontSize: 12,
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w400,
+                            color: MyColors.midnightOrchidColor,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                const Spacer(),
-                Image.asset(MyImages.cornerBallons)
-              ],),
+                  const Spacer(),
+                  Image.asset(MyImages.cornerBallons)
+                ],
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
@@ -66,9 +71,11 @@ class RegisterPage extends StatelessWidget {
                       onPressed: () {},
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(
-                            MyColors.enchantingAmethystColor,),
+                          MyColors.enchantingAmethystColor,
+                        ),
                         minimumSize: MaterialStateProperty.all<Size>(
-                            const Size(double.infinity, 50),),
+                          const Size(double.infinity, 50),
+                        ),
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(

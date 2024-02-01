@@ -8,11 +8,22 @@ class BasicTextFormField extends StatelessWidget {
 
   final String prefixIconChoice;
 
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: _buildInputDecoration(),
+      obscureText: password(),
     );
+  }
+  bool password(){
+    if (prefixIconChoice=='password'){
+      return true;
+    }
+    if (prefixIconChoice=='password2'){
+      return true;
+    }
+    return false;
   }
 
   InputDecoration _buildInputDecoration() {
