@@ -63,7 +63,7 @@ class RegisterPage extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all<Color>(
                       MyColors.enchantingAmethystColor),
                   minimumSize: MaterialStateProperty.all<Size>(
-                      Size(double.infinity, 50.0)),
+                      const Size(double.infinity, 50.0)),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),

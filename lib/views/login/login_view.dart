@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:listopad3/utils/my_images.dart';
 import 'package:listopad3/utils/my_texts.dart';
@@ -58,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                       backgroundColor: MaterialStateProperty.all<Color>(
                           MyColors.enchantingAmethystColor),
                       minimumSize: MaterialStateProperty.all<Size>(
-                          Size(double.infinity, 50.0)),
+                          const Size(double.infinity, 50.0)),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15),
