@@ -12,10 +12,10 @@ class SocialLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var socialNetworkChoice="";
-    if (socialNetwork=="google") socialNetworkChoice=MyImages.socialLogo_google;
-    if (socialNetwork=="fb") socialNetworkChoice=MyImages.socialLogo_fb;
-    if (socialNetwork=="in") socialNetworkChoice=MyImages.socialLogo_in;
-    if (socialNetwork=="x") socialNetworkChoice=MyImages.socialLogo_x;
+    if (socialNetwork=="google") socialNetworkChoice=MyImages.socialLogoGoogle;
+    if (socialNetwork=="fb") socialNetworkChoice=MyImages.socialLogoFb;
+    if (socialNetwork=="in") socialNetworkChoice=MyImages.socialLogoIn;
+    if (socialNetwork=="x") socialNetworkChoice=MyImages.socialLogoX;
     return Container(
         width: 50,
         height: 50,
