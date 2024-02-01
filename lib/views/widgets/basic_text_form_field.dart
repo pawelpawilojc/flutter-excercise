@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:listopad3/utils/my_colors.dart';
 import 'package:listopad3/utils/my_images.dart';
 import 'package:listopad3/utils/my_texts.dart';
-
+import 'package:listopad3/views/login/login_view.dart';
 class BasicTextFormField extends StatelessWidget {
   const BasicTextFormField({required this.prefixIconChoice, super.key});
 
@@ -14,7 +14,13 @@ class BasicTextFormField extends StatelessWidget {
     return TextFormField(
       decoration: _buildInputDecoration(),
       obscureText: password(),
+      controller: myController(),
     );
+  }
+  TextEditingController myController(){
+    if (prefixIconChoice == 'person') return personController;
+    if (prefixIconChoice == 'password') return passwordController;
+    return personController;
   }
   bool password(){
     if (prefixIconChoice=='password'){

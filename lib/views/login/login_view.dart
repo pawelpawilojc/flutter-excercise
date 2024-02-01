@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:listopad3/utils/my_colors.dart';
 import 'package:listopad3/utils/my_images.dart';
 import 'package:listopad3/utils/my_texts.dart';
+import 'package:listopad3/views/home/home_view.dart';
 import 'package:listopad3/views/register/register_view.dart';
 import 'package:listopad3/views/widgets/basic_text_form_field.dart';
 import 'package:listopad3/views/widgets/social_logo.dart';
-
+final personController = TextEditingController();
+final passwordController = TextEditingController();
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -14,6 +16,15 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+
+
+  @override
+  void dispose() {
+    personController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -57,7 +68,16 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 const SizedBox(height: 30),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    if (personController.text=='pawel' && passwordController.text=='haslo'){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const HomePage(),
+                        ),
+                      );
+                    }
+                  },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(
                       MyColors.enchantingAmethystColor,

@@ -38,7 +38,7 @@ class RegisterPage extends StatelessWidget {
                     ),
                   ),
                   const Spacer(),
-                  Image.asset(MyImages.cornerBallons)
+                  Image.asset(MyImages.cornerBalloons)
                 ],
               ),
               Padding(

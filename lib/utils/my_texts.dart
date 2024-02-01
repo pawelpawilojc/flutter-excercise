@@ -11,4 +11,6 @@ class MyTexts {
   static const yesAccount = 'Already have an account? ';
   static const signUp = 'Sign Up';
   static const back = 'Back';
+  static const home = 'Home';
+  static const logout = 'Sign Out';
 }
