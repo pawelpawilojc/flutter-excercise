@@ -24,6 +24,13 @@ class BasicTextFormField extends StatelessWidget {
         hintText: "Email or User Name"
       );
     }
+    if (prefixIconChoice == "name") {
+      return InputDecoration(
+          prefixIcon: Icon(Icons.person_outline_rounded),
+          prefixIconColor: MyColors.enchantingAmethystColor,
+          hintText: "Full Name"
+      );
+    }
     if (prefixIconChoice == "email") {
       return InputDecoration(
         prefixIcon: Icon(Icons.email_outlined),
@@ -34,6 +41,16 @@ class BasicTextFormField extends StatelessWidget {
       return InputDecoration(
         prefixIcon: Icon(Icons.lock_outline_rounded),
         prefixIconColor: MyColors.enchantingAmethystColor,
+        hintText: "Password",
+        suffixIcon: Icon(Icons.remove_red_eye_outlined),
+        suffixIconColor: MyColors.grayColor,
+      );
+    }
+    if (prefixIconChoice == "password2") {
+      return InputDecoration(
+        prefixIcon: Icon(Icons.lock_outline_rounded),
+        prefixIconColor: MyColors.enchantingAmethystColor,
+        hintText: "Confirm Password",
         suffixIcon: Icon(Icons.remove_red_eye_outlined),
         suffixIconColor: MyColors.grayColor,
       );
