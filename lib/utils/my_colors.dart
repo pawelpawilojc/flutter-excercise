@@ -6,6 +6,8 @@ class MyColors {
   static final midnightOrchidColor = HexColor('#471AA0');
   static final enchantingAmethystColor = HexColor('#9747FF');
   static final grayColor = HexColor('#4D4D4D');
+  static final goldenHuesColor = HexColor('#FFFC8D');
+  static final emeraldBlissColor = HexColor('#7CFDAB');
 }
 
 class HexColor extends Color {

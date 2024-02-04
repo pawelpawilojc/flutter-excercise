@@ -1,17 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:listopad3/utils/my_colors.dart';
+import 'package:listopad3/views/home/home_view.dart';
 import 'package:listopad3/views/login/login_view.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    title: 'Navigation Basics',
-    home: LoginPage(),
-    debugShowCheckedModeBanner: false,
-  ));
+  runApp(MyApp());
 }
 
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: FutureBuilder<bool>(
+        future: _checkIfLoggedIn(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return CircularProgressIndicator(
+                backgroundColor: MyColors.midnightOrchidColor,
+                color: MyColors.enchantingAmethystColor,);
+          } else {
+            final isLoggedIn = snapshot.data ?? false;
 
+            return isLoggedIn ? const HomePage() : const LoginPage();
+          }
+        },
+      ),
+    );
+  }
 
+  Future<bool> _checkIfLoggedIn() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool('logged') ?? false;
+  }
+}
 
+//
 
 // import 'package:flutter/material.dart';
 // import 'package:flutter/gestures.dart';

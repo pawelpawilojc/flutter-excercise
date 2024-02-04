@@ -3,11 +3,11 @@ import 'package:listopad3/utils/my_colors.dart';
 import 'package:listopad3/utils/my_images.dart';
 import 'package:listopad3/utils/my_texts.dart';
 import 'package:listopad3/views/login/login_view.dart';
+
 class BasicTextFormField extends StatelessWidget {
   const BasicTextFormField({required this.prefixIconChoice, super.key});
 
   final String prefixIconChoice;
-
 
   @override
   Widget build(BuildContext context) {
@@ -17,16 +17,19 @@ class BasicTextFormField extends StatelessWidget {
       controller: myController(),
     );
   }
-  TextEditingController myController(){
+
+
+  TextEditingController myController() {
     if (prefixIconChoice == 'person') return personController;
     if (prefixIconChoice == 'password') return passwordController;
     return personController;
   }
-  bool password(){
-    if (prefixIconChoice=='password'){
+
+  bool password() {
+    if (prefixIconChoice == 'password') {
       return true;
     }
-    if (prefixIconChoice=='password2'){
+    if (prefixIconChoice == 'password2') {
       return true;
     }
     return false;
@@ -38,8 +41,7 @@ class BasicTextFormField extends StatelessWidget {
       borderRadius: BorderRadius.circular(15),
       borderSide: borderSide,
     );
-    const borderSideThicker =
-        BorderSide(color: Color(0xFF9747FF), width: 4);
+    const borderSideThicker = BorderSide(color: Color(0xFF9747FF), width: 4);
     final borderFocused = OutlineInputBorder(
       borderRadius: BorderRadius.circular(15),
       borderSide: borderSideThicker,
@@ -56,7 +58,6 @@ class BasicTextFormField extends StatelessWidget {
         prefixIcon: Image.asset(
           MyImages.userIcon,
         ),
-
         hintText: MyTexts.hintPerson,
         hintStyle: const TextStyle(
           fontSize: 15,
@@ -80,7 +81,6 @@ class BasicTextFormField extends StatelessWidget {
         prefixIcon: Image.asset(
           MyImages.userIcon,
         ),
-
         hintText: MyTexts.hintName,
         hintStyle: hintStyle,
         enabledBorder: borderEnabled,
